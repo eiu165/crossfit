@@ -1,7 +1,7 @@
-﻿using System.Web; 
-using Microsoft.Web.Optimization;
+﻿using System.Web;
+using System.Web.Optimization;
 
-namespace Web
+namespace MvcApplication1
 {
     public class BundleConfig
     {

@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Security;
-using Web.Models;
+using MvcApplication1.Models;
 
-namespace Web.Controllers
+namespace MvcApplication1.Controllers
 {
 
     [Authorize]

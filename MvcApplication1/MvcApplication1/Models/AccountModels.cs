@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Web.Security;
 
-namespace Web.Models
+namespace MvcApplication1.Models
 {
 
     public class ChangePasswordModel
