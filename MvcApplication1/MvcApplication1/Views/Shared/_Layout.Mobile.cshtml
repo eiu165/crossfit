@@ -19,7 +19,17 @@
 <body>                     
     <div data-role="page"  data-theme="b">  
         <div data-role="header">
-            <h1>My Title</h1>
+            <h1><a href="/">Mobile Music</a></h1> 
+            <a href="@Url.Content("~")" id="current" data-icon="home"  data-iconpos="notext"  >home</a>
+            <div data-role="navbar">
+                <ul>                               
+                    <li  ><a href="@Url.Content("~/Store")" >store</a></li>
+                    <li  >
+                        @{  Html.RenderAction("CartSummary", "ShoppingCart");    }
+                    </li>
+                    <li  ><a href="@Url.Content("~/StoreManager")" >admin</a></li>
+                </ul> 
+            </div>    
         </div>   
         <div data-role="content">  
                 @RenderBody()
