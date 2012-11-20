@@ -7,15 +7,12 @@ using System.Web.Mvc;
 namespace MvcApplication1.Controllers
 {
     public class HomeController : Controller
-    {
-        public FileResult Index()
-        {
-            return File("index.html", "text/html"); 
-        }
+    { 
+         
+            public FileResult Index()
+            {
+                return File("index.html", "text/html");
+            } 
 
-        public ActionResult About()
-        {
-            return View();
-        }
     }
 }
