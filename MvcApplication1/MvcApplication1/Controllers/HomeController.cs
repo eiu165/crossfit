@@ -8,11 +8,9 @@ namespace MvcApplication1.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public FileResult Index()
         {
-            ViewBag.Message = "Welcome to ASP.NET MVC!";
-
-            return View();
+            return File("index.html", "text/html"); 
         }
 
         public ActionResult About()
