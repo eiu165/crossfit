@@ -8,9 +8,10 @@ namespace MvcApplication1.Controllers
 {
     public class HomeController : Controller
     {
-        public FileResult Index()
+        public ActionResult Index()
         {
-            return File("index.html", "text/html");
+            return View("Index2");
+            //return File("index.html", "text/html");
         } 
 
         public ActionResult Index2()

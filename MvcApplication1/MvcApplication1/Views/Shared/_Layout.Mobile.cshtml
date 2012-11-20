@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>My Page</title>
@@ -10,9 +10,9 @@
         $(document).bind("pageinit", function () {
             alert('page init');
         });
-//        $(document).on("pagehide", function () {
-//            $(e.target).remove();
-//        });
+        //        $(document).on("pagehide", function () {
+        //            $(e.target).remove();
+        //        });
         
     </script>
 </head>
@@ -21,19 +21,8 @@
         <div data-role="header">
             <h1>My Title</h1>
         </div>   
-        <div data-role="content">
-            <ul data-role="listview" data-inset="true" data-filter="true">
-                <li><a href="#">Acura</a></li>
-                <li><a href="#">Audi</a></li>
-                <li><a href="#">BMW</a></li>
-                <li><a href="#">Cadillac</a></li>
-                <li><a href="#">Ferrari</a></li>
-            </ul>
-            <form>
-               <label for="slider-0">Input slider:</label>
-               <input type="range" name="slider" id="slider-0" value="25" min="0" max="100"  />
-            </form>
-            <a href="#" data-role="button" data-icon="star">Star button</a>  
+        <div data-role="content">  
+                @RenderBody()
         </div>    
         <div data-role="footer">
             <h1>footer</h1>
