@@ -16,7 +16,7 @@ namespace MvcApplication1.Controllers
             for (int i = 0; i < 10; i++)
             {
                 dynamic a = new ExpandoObject();
-                a.Name = "Album";
+                a.Name = "Album"+i;
                 a.Id = i;
                 list.Add(a);
             }     

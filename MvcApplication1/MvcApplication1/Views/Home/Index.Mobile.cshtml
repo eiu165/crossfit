@@ -5,17 +5,19 @@
         
                        
 <h3><em>Fresh</em> off the grill</h3>
-
-<ul id="album-list">
+                           
+<ul data-role="listview" data-inset="true" data-filter="true">
     @foreach (var a in Model)
-    {
-        <li>
-            @*<a href="@Url.Action("Details", "Store", new { id = a.Id })">
-                                        
-                      <span>@a.Name</span> </a>*@  
-                      
-            <span>@a.Name</span>
-        </li>
-    }
+    {         
+            @*<li><a href="@Url.Action("Details", "Store", new { id = a.Id })">  
+                      <span>@a.Name</span> </a></li>*@    
+                <li><a  data-transition="slide" href="@Url.Action("Details", "Store", new { id = a.Id })">@a.Name</a></li>      
+    }              
 </ul>
-       
+
+
+
+
+
+
+
