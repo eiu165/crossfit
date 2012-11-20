@@ -64,7 +64,7 @@ namespace MvcApplication1.Controllers
                     }
                     else
                     {
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Index2", "Home");
                     }
                 }
                 else
@@ -84,7 +84,7 @@ namespace MvcApplication1.Controllers
         {
             FormsAuthentication.SignOut();
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index2", "Home");
         }
 
         //
@@ -140,7 +140,7 @@ namespace MvcApplication1.Controllers
                 if (createStatus == MembershipCreateStatus.Success)
                 {
                     FormsAuthentication.SetAuthCookie(model.UserName, createPersistentCookie: false);
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index2", "Home");
                 }
                 else
                 {
