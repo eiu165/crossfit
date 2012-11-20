@@ -8,7 +8,12 @@ namespace MvcApplication1.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public FileResult Index()
+        {
+            return File("index.html", "text/html");
+        } 
+
+        public ActionResult Index2()
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 
