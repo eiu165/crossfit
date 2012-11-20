@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Massive;
 
 namespace MvcApplication1.Controllers
 {
@@ -10,16 +12,18 @@ namespace MvcApplication1.Controllers
     {
         public ActionResult Index()
         {
-            return View("Index2");
+            var list = new List<ExpandoObject>();
+            for (int i = 0; i < 10; i++)
+            {
+                dynamic a = new ExpandoObject();
+                a.Name = "Album";
+                a.Id = i;
+                list.Add(a);
+            }     
+            return View(list.ToList() );
             //return File("index.html", "text/html");
         } 
-
-        public ActionResult Index2()
-        {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-
-            return View();
-        }
+               
 
         public ActionResult About()
         {

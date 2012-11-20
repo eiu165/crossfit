@@ -1,0 +1,21 @@
+
+@{
+    ViewBag.Title = "Home Page";
+}
+        
+                       
+<h3><em>Fresh</em> off the grill</h3>
+
+<ul id="album-list">
+    @foreach (var a in Model)
+    {
+        <li>
+            @*<a href="@Url.Action("Details", "Store", new { id = a.Id })">
+                                        
+                      <span>@a.Name</span> </a>*@  
+                      
+            <span>@a.Name</span>
+        </li>
+    }
+</ul>
+       
