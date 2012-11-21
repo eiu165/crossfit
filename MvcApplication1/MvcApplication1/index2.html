@@ -4,7 +4,10 @@
     <title>My Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0,user-scalable=0">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">  
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">   
+    <link rel="apple-touch-icon"  href="/Images/57.png"/>
+    <link rel="apple-touch-icon"  sizes="72x72" href="/Images/72.png"/>
+    <link rel="apple-touch-icon"  sizes="114x114"   href="/Images/114.png"/>
     <style >
         canvas { width: 100%;height: 200px;border: black 1px solid; }
     </style>
@@ -52,7 +55,11 @@
     }, false);
 
     var el = document.getElementById('touchArea');
-
+    
+    el.addEventListener('click', function (event) { 
+        draw(event.x, event.y);
+    }, false);
+    
     el.addEventListener('touchstart', function (event) {
         originX = event.touches[0].pageX;
         writeMessage('touchstart', event);
@@ -83,12 +90,14 @@
     }
     function draw(x, y) {
         var cvs = document.getElementById('touchArea');
-        var ctx = cvs.getContent('2d');
+        var ctx = cvs.getContext('2d');
         ctx.save();
         ctx.setTransform(1, 0, 0, 1, 0, 0);
         ctx.clearRect(0, 0, cvs.width, cvs.height);
         ctx.restore();
         ctx.fillStyle = "#FF0000";
+        ctx.arc(x, y - cvs.offsetTop, 3, 0, Math.PI * 2, true);
+        ctx.closePath();
         ctx.fill();
     }
 
