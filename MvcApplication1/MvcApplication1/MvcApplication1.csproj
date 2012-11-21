@@ -163,6 +163,7 @@
     <Content Include="Content\themes\base\jquery.ui.slider.css" />
     <Content Include="Content\themes\base\jquery.ui.tabs.css" />
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="index2.html" />
     <Content Include="Data\Migration\MvcMusicStore-Create.sql" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
