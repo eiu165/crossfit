@@ -25,9 +25,9 @@
                 <ul>                               
                     <li  ><a href="@Url.Content("~/Store")" >store</a></li>
                     <li  >
-                        @{  Html.RenderAction("CartSummary", "ShoppingCart");    }
+                        @{  Html.RenderAction("ListLink", "CheckList");    }
                     </li>
-                    <li  ><a href="@Url.Content("~/StoreManager")" >admin</a></li>
+                    <li  ><a href="@Url.Content("~/Home/About")" data-rel="dialog" >about</a></li>
                 </ul> 
             </div>    
         </div>   

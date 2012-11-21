@@ -29,7 +29,7 @@ namespace MvcApplication1.Controllers
         {
             ViewBag.Message = "Your quintessential app description page.";
 
-            return View();
+            return PartialView();
         }
 
         public ActionResult Contact()
