@@ -56,8 +56,9 @@
 
     var el = document.getElementById('touchArea');
     
-    el.addEventListener('click', function (event) { 
-        draw(event.x, event.y);
+    el.addEventListener('click', function (event) {
+        draw(event.pageX, event.pageY);
+        document.getElementById('result').innerHTML = event.pageX + ' , ' + event.pageY;  
     }, false);
     
     el.addEventListener('touchstart', function (event) {
@@ -92,11 +93,12 @@
         var cvs = document.getElementById('touchArea');
         var ctx = cvs.getContext('2d');
         ctx.save();
-        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        //ctx.setTransform(1, 0, 0, 1, 0, 0);
         ctx.clearRect(0, 0, cvs.width, cvs.height);
         ctx.restore();
         ctx.fillStyle = "#FF0000";
-        ctx.arc(x, y - cvs.offsetTop, 3, 0, Math.PI * 2, true);
+        //ctx.arc(x, y - cvs.offsetTop, 3, 0, Math.PI * 2, true);
+        ctx.rect(x, y, 5, 5);
         ctx.closePath();
         ctx.fill();
     }

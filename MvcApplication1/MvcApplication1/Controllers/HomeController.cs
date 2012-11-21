@@ -13,13 +13,14 @@ namespace MvcApplication1.Controllers
         public ActionResult Index()
         {
             var list = new List<ExpandoObject>();
-            for (int i = 0; i < 10; i++)
-            {
-                dynamic a = new ExpandoObject();
-                a.Name = "Album"+i;
-                a.Id = i;
-                list.Add(a);
-            }     
+            dynamic a = new ExpandoObject(); a.Name = "The Bridge"; a.Id = 1; list.Add(a);
+            a = new ExpandoObject(); a.Name = "Unplugged"; a.Id = 2; list.Add(a);
+            a = new ExpandoObject(); a.Name = "The Stranger"; a.Id = 3; list.Add(a);
+            a = new ExpandoObject(); a.Name = "Piano Man"; a.Id = 4; list.Add(a);
+            a = new ExpandoObject(); a.Name = "Ten"; a.Id = 5; list.Add(a);
+            a = new ExpandoObject(); a.Name = "August and Everything After"; a.Id = 6; list.Add(a);
+            a = new ExpandoObject(); a.Name = "West"; a.Id = 7; list.Add(a);
+
             return View(list.ToList() );
             //return File("index.html", "text/html");
         } 
