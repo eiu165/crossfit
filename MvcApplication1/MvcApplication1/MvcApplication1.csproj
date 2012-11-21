@@ -166,6 +166,9 @@
     <Content Include="Data\Migration\MvcMusicStore-Create.sql" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\114.png" />
+    <Content Include="Images\57.png" />
+    <Content Include="Images\72.png" />
     <Content Include="index.html" />
     <Content Include="Scripts\jquery-1.6.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.6.2.js" />
