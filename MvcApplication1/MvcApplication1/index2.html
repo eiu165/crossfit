@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>My Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0,user-scaleable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0,user-scalable=0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">  
     <style >
@@ -34,7 +34,7 @@
             <div id="msg2">   </div>  
          
             <canvas id="touchArea"></canvas>   
-            <div id="someDiv">  someDiv</div>  
+            <div id="result">  someDiv</div>  
         </div>               
         <div data-role="footer">   
         </div>               
@@ -51,7 +51,7 @@
         event.preventDefault();
     }, false);
 
-    var el = doucment.getElemementById('touchArea');
+    var el = document.getElement('touchArea');
 
     el.addEventListener('touchstart', function (event) {
         originX = event.touches[0].pageX;
@@ -60,15 +60,16 @@
     el.addEventListener('touchmove', function (event) {
         var touch = event.touches[0];
         finalx = touch.pageX;
+        document.getElementById('result').innerHTML = originX + ' , ' + finalx; 
         draw(touch.pageX, touch.pageY);
         writeMessage('touchmove', event);
     }, false);
     el.addEventListener('touchend', function (event) {
         if (finalx < originX) {
-            
+            document.getElementById('result').innerHTML = 'swipe left';    
         }
         else if  (finalx > originX) {
-            
+            document.getElementById('result').innerHTML = 'swipe right'; 
         } 
         writeMessage('touchend', event);
     }, false);
