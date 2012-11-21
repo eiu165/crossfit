@@ -51,7 +51,7 @@
         event.preventDefault();
     }, false);
 
-    var el = document.getElement('touchArea');
+    var el = document.getElementById('touchArea');
 
     el.addEventListener('touchstart', function (event) {
         originX = event.touches[0].pageX;
@@ -82,7 +82,7 @@
         document.getElementById('msg2').innerHTML = 'Touches:' + event.touches.length;
     }
     function draw(x, y) {
-        var cvs = document.getElemementById('touchArea');
+        var cvs = document.getElementById('touchArea');
         var ctx = cvs.getContent('2d');
         ctx.save();
         ctx.setTransform(1, 0, 0, 1, 0, 0);
