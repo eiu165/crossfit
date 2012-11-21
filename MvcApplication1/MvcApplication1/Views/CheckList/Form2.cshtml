@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Forms2";
+}
+                    
+ 
+
+			
+			<h2>File inputs</h2>
+			<p>File inputs have limited styling options on most platforms due to security concerns. As of version 1.3, we will automatically apply standard theming to file inputs. In testing, we've found that while the button to select a file cannot be styled, the input that surrounds the button seems to get the theme colors, corners and dimensions in most modern browsers.</p>
+			
+			<div data-role="fieldcontain">
+	         <label for="file">File:</label>
+	         <input type="file" name="file" id="file" value="" />
+			</div>
+			
+			
+			<h2>Textareas</h2>
+			<p>For multi-line text inputs, use a <code>textarea</code> element. The framework will auto-grow the height of the textarea to avoid the need for an internal scrollbar. </p>
+			<p>Set the <code>for</code> attribute of the <code>label</code> to match the <code>id</code> of the <code>textarea</code> so they are semantically associated, and wrap them in a <code>div</code> with the <code> data-role="fieldcontain"</code> attribute to group them.</p>
+             
+
+			<p>This will produce a basic textarea with the width set to 100% of the parent container and the label stacked on a separate line. The textarea will grow to fit new lines as you type:</p>
+			<label for="textarea-a">Textarea:</label>
+			<textarea name="textarea" id="textarea-a">
+I'm a basic textarea. If this is pre-populated with content, the height will be automatically adjusted to fit without needing to scroll. That is a pretty handy usability feature.
+			</textarea>
+            
+			 
+			<p>The textarea is displayed like this and will grow to fit new lines as you type:</p>
+			<div data-role="fieldcontain">
+			<label for="textarea">Textarea:</label>
+			<textarea name="textarea" id="textarea"></textarea>
+			</div>
+			                

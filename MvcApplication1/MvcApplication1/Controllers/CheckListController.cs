@@ -16,6 +16,11 @@ namespace MvcApplication1.Controllers
             return View();
         }
 
+        public ActionResult Form2()
+        {
+            return View();
+        }
+
         [ChildActionOnly]
         public ActionResult ListLink()
         {      
