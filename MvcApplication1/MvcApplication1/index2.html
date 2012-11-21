@@ -30,18 +30,11 @@
 <body>
     <div data-role="page" data-theme="b">
         <div data-role="content">
-            <p>
-                this is just some text 
-            </p>  
-            <ul data-role="listview" data-inset="true" data-filter="true">
-                <li class="swipe">Alabama </li>
-                <li class="swipe">Alaska </li>
-                <li class="swipe">Arizona </li>
-                <li class="swipe">Arkansas </li>  
-            </ul> 
+            <div id="msg">   </div> 
+            <div id="msg2">   </div>  
+         
             <canvas id="touchArea"></canvas>   
-            <div id="someDiv">
-                someDiv</div>  
+            <div id="someDiv">  someDiv</div>  
         </div>               
         <div data-role="footer">   
         </div>               
@@ -71,6 +64,12 @@
         writeMessage('touchmove', event);
     }, false);
     el.addEventListener('touchend', function (event) {
+        if (finalx < originX) {
+            
+        }
+        else if  (finalx > originX) {
+            
+        } 
         writeMessage('touchend', event);
     }, false);
     el.addEventListener('touchcancel', function (event) {
@@ -82,7 +81,7 @@
         document.getElementById('msg2').innerHTML = 'Touches:' + event.touches.length;
     }
     function draw(x, y) {
-        var cvs = doucment.getElemementById('touchArea');
+        var cvs = document.getElemementById('touchArea');
         var ctx = cvs.getContent('2d');
         ctx.save();
         ctx.setTransform(1, 0, 0, 1, 0, 0);
@@ -101,7 +100,16 @@
                
                
 
-<!--<li class="swipe">California </li>
+<!--
+    
+       <ul data-role="listview" data-inset="true" data-filter="true">
+                <li class="swipe">Alabama </li>
+                <li class="swipe">Alaska </li>
+                <li class="swipe">Arizona </li>
+                <li class="swipe">Arkansas </li>  
+            </ul> 
+
+    <li class="swipe">California </li>
     <li class="swipe">Colorado </li>
     <li class="swipe">Connecticut </li>
     <li class="swipe">Delaware </li>
